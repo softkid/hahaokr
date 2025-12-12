@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>HAHAO — 글로벌 문화콘텐츠 기업</title>
+    <meta name="description" content="HAHAO — 글로벌 문화콘텐츠 기업의 철학과 프로젝트" />
+    <meta name="theme-color" content="#0b0b0b" />
+    <style>
+        :root {
+            --bg: #0b0b0b;
+            --card: #111;
+            --muted: #9aa3a8;
+            --accent: #ffd166;
+            --glass: rgba(255, 255, 255, 0.04);
+            --radius: 16px;
+            --maxwidth: 880px;
+            font-family: "Noto Sans KR", system-ui, -apple-system, "Helvetica Neue", Arial;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: var(--bg);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: var(--maxwidth);
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        header.hero {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            padding: 18px;
+            border-radius: 20px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .ci {
+            width: 84px;
+            height: 84px;
+            border-radius: 14px;
+            background: var(--glass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(6px);
+        }
+
+        .ci img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .hero-body .brand {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .hero-body .tagline {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .cta-row {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #0b0b0b;
+            background: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn.ghost {
+            background: transparent;
+            color: var(--muted);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        nav.site-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        nav.site-nav a {
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 12px;
+        }
+
+        nav.site-nav a.active {
+            background: rgba(255, 255, 255, 0.03);
+            color: #fff;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 18px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 17px;
+        }
+
+        p.lead {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .proj {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.02);
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .team-grid {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+        }
+
+        .member {
+            min-width: 120px;
+            border-radius: 12px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.02);
+            text-align: center;
+        }
+
+        .member .avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin: auto;
+            background: linear-gradient(135deg, #222, #111);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 720px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(6px);
+            padding: 10px;
+            border-radius: 999px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .nav-icon {
+            font-size: 12px;
+            color: var(--muted);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav-icon.active {
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- HERO -->
+        <header class="hero">
+            <div class="ci"><img src="assets/ci.png" alt="HAHAO CI"></div>
+            <div class="hero-body">
+                <div class="brand">HAHAO</div>
+                <div class="tagline">글로벌 문화콘텐츠 기업 — 문화의 감각을 디자인합니다.</div>
+                <div class="cta-row">
+                    <a class="btn" href="#projects">프로젝트 보기</a>
+                    <a class="btn ghost" href="#philosophy">철학</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- NAV -->
+        <nav class="site-nav">
+            <div><strong>HAHAO</strong> · GLOBAL CULTURAL CONTENT</div>
+            <div>
+                <a href="#projects" class="active">프로젝트</a>
+                <a href="#team">팀</a>
+                <a href="#philosophy">철학</a>
+            </div>
+        </nav>
+
+        <!-- PROJECTS -->
+        <section class="card" id="projects">
+            <h2>Projects</h2>
+            <p class="lead">HAHAO가 만드는 핵심 프로젝트입니다.</p>
+            <div class="projects">
+                <a class="proj" href="https://hahaostory.com" target="_blank">
+                    <div><strong>hahaostory.com</strong><br><small>스토리 기반 문화콘텐츠 플랫폼</small></div>
+                    <div>→</div>
+                </a>
+                <a class="proj" href="https://hahaoplace.com" target="_blank">
+                    <div><strong>hahaoplace.com</strong><br><small>지역 공예 생태계 디지털 맵</small></div>
+                    <div>→</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section class="card" id="team">
+            <h2>Team</h2>
+            <p class="lead">창의성과 실행력이 결합된 HAHAO 팀입니다.</p>
+            <div class="team-grid">
+                <div class="member">
+                    <div class="avatar">A</div>
+                    <div>Kim</div><small>Founder</small>
+                </div>
+                <div class="member">
+                    <div class="avatar">J</div>
+                    <div>Park</div><small>Tech</small>
+                </div>
+                <div class="member">
+                    <div class="avatar">S</div>
+                    <div>Lee</di
