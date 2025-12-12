@@ -116,7 +116,13 @@ const Projects = () => {
 
 // Placeholder content if exact text is unavailable
 const AboutText = "At HAHAO, we believe in the power of storytelling and spatial design to bridge cultures. Our team is a diverse collective of artists, engineers, and visionaries dedicated to creating experiences that matter.";
-const CredoText = "Creativity is our currency. Integrity is our compass. We strive for excellence in every pixel, every brick, and every word. We are not just building brands; we are building legacies.";
+const CredoText = `We believe that our first responsibility is for craft makers, craft sellers, craft exhibitors, craft educationers, and anyone who uses our craft platform services. We must constantly strive to provide value, provide various crafts, and maintain reasonable prices. Customers' orders must be processed quickly and accurately. Our business partners should have the opportunity to make a fair profit.
+
+We take responsibility for the employees we work with all over the world. We must provide an inclusive working environment in which each person should be considered an individual. We must respect their diversity and dignity and acknowledge their merits. They should have a sense of security, a sense of accomplishment, and a sense of purpose in their jobs. Compensation must be fair and appropriate, and working conditions must be clean, orderly and safe. We need to support the health and well-being of our employees and help them complete their family and other personal responsibilities. Employees should be free to make suggestions and complaints. Qualified people should have equal opportunities for employment, development and promotion. We must provide competent leaders and their actions must be just and ethical.
+
+We are responsible for the communities in which we live and work, as well as the world community. We need to help people become healthier by exhibiting and supporting them in more places around the world for better access and purchasing crafts. We should be good citizens. We need to support good work and philanthropy, support better health and education, and pay fair taxes. We must keep the properties we have the privileges to use in good condition while protecting the environment and natural resources.
+
+Our ultimate responsibility lies with our shareholders. Businesses need to make healthy profits. We have to experiment with new ideas. Continue research, develop innovative programs, invest for the future, and pay for mistakes. Buy new equipment, provide new facilities, and launch new products. Reserve funds should be prepared for adverse situations. When operating on these principles, shareholders must realize their fair returns.`;
 
 const Team = () => (
   <Section id="team">

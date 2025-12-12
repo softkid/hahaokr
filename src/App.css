@@ -268,6 +268,7 @@
   line-height: 1.6;
   font-weight: 300;
   color: #e5e5e5;
+  white-space: pre-line;
 }
 
 .quote-mark {
