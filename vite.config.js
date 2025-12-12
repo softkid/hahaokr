@@ -5,9 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'public', // Cloudflare Pages는 기본적으로 public 디렉토리를 빌드 출력으로 사용
+    outDir: 'dist', // 기본 빌드 출력 디렉토리
     assetsDir: 'assets',
     emptyOutDir: true,
   },
-  base: '/', // Cloudflare Pages 루트 경로 배포
+  base: '/', // 루트 경로 배포
 })
