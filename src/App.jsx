@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import hahaoplaceLogo from './assets/PLACE.png';
+import hahaostoryLogo from './assets/hahaostory-logo.svg';
 import './App.css';
 
 const LOGO_URL = "https://assets.softr-files.com/applications/2d9c2041-e607-4a3e-b316-d2b114351bb1/assets/4e90a858-1b94-4b90-a185-4e7c43238f1c.png?rnd=1699294960741";
@@ -86,12 +88,20 @@ const Hero = () => (
 
 const Projects = () => {
   const projects = [
-    { title: "HAHAO Story", url: "https://hahaostory.com", desc: "Crafting narratives that resonate." },
-    { title: "HAHAO Place", url: "https://hahaoplace.com", desc: "Spaces designed for inspiration." }
+    { title: "HAHAO Story", url: "https://hahaostory.com", desc: "Crafting narratives that resonate.", logo: hahaostoryLogo },
+    { title: "HAHAO Place", url: "https://hahaoplace.com", desc: "Spaces designed for inspiration.", logo: hahaoplaceLogo }
   ];
 
   return (
     <Section id="projects">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        style={{ marginBottom: '3rem', textAlign: 'center' }}
+      >
+        <h2 className="about-title">Our <span className="hero-subtitle">Projects</span></h2>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -101,6 +111,9 @@ const Projects = () => {
         {projects.map((p, i) => (
           <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" className="project-card group">
             <div className="project-content">
+              {p.logo && (
+                <img src={p.logo} alt={`${p.title} Logo`} className="project-logo" />
+              )}
               <h3 className="project-title">{p.title}</h3>
               <p className="project-desc">{p.desc}</p>
               <span className="visit-link">
