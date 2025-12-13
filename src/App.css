@@ -283,7 +283,13 @@
   padding: 0 0.5rem;
   opacity: 0.9;
   transition: opacity 0.3s;
+  /* PNG 이미지가 이미 흰색이면 필터 불필요 */
   filter: brightness(0) invert(1);
+}
+
+/* PNG 이미지가 이미 흰색인 경우 필터 제거 */
+.project-logo[src*=".png"] {
+  filter: none;
 }
 
 .project-card:hover .project-logo {

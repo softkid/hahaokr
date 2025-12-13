@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
-import hahaoplaceLogo from './assets/hahaoplace.svg';
-import hahaostoryLogo from './assets/hahaostory.svg';
+import hahaoplaceLogo from './assets/hahaoplace.png';
+import hahaostoryLogo from './assets/hahaostory.png';
 import './App.css';
 
 const LOGO_URL = "https://assets.softr-files.com/applications/2d9c2041-e607-4a3e-b316-d2b114351bb1/assets/4e90a858-1b94-4b90-a185-4e7c43238f1c.png?rnd=1699294960741";
@@ -112,7 +112,18 @@ const Projects = () => {
           <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" className={`project-card group ${p.title === "HAHAO Place" ? "project-card-place" : ""}`}>
             <div className="project-content">
               {p.logo && (
-                <img src={p.logo} alt={`${p.title} Logo`} className="project-logo" />
+                <img 
+                  src={p.logo} 
+                  alt={`${p.title} Logo`} 
+                  className="project-logo"
+                  onError={(e) => {
+                    console.error(`Failed to load logo for ${p.title}:`, p.logo, e);
+                    e.target.style.display = 'none';
+                  }}
+                  onLoad={() => {
+                    console.log(`Successfully loaded logo for ${p.title}:`, p.logo);
+                  }}
+                />
               )}
               <h3 className="project-title">{p.title}</h3>
               <p className="project-desc">{p.desc}</p>
